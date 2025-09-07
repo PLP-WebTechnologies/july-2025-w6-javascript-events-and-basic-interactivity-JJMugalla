@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Events & Interactivity</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>JavaScript Events and Basic Interactivity</h1>
+        <div class="toggle-container">
+            <span>Toggle Light/Dark Mode</span>
+            <label class="switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="left-column">
+            <section class="form-section">
+                <h2>User Registration</h2>
+                <form id="registration-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name">
+                        <div class="error" id="name-error">Please enter a valid name (min 2 characters)</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="text" id="email" name="email">
+                        <div class="error" id="email-error">Please enter a valid email address</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password">
+                        <div class="error" id="password-error">Password must be at least 8 characters with 1 number and 1 special character</div>
+                    </div>
+                    <button type="submit">Register</button>
+                </form>
+            </section>
+
+            <section class="counter">
+                <h2>Counter Game</h2>
+                <div class="counter-value" id="counter-value">0</div>
+                <div class="counter-buttons">
+                    <button id="decrement">-</button>
+                    <button id="reset">Reset</button>
+                    <button id="increment">+</button>
+                </div>
+                <p>Try to get to 10 without going over!</p>
+            </section>
+
+            <section class="faq">
+                <h2>FAQ Section</h2>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What is JavaScript?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        JavaScript is a programming language that enables interactive web pages. It is an essential part of web applications.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What are JavaScript events?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        JavaScript events are actions that occur on web pages, such as clicks, mouse movements, keyboard input, etc.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Why is form validation important?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Form validation ensures that users enter information in the correct format, improving data quality and user experience.
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="right-column">
+            <section class="dropdown-section">
+                <h2>Dropdown Menu</h2>
+                <div class="dropdown">
+                    <button class="dropdown-btn">Select Options</button>
+                    <div class="dropdown-content" id="dropdown-content">
+                        <a href="#">Option 1</a>
+                        <a href="#">Option 2</a>
+                        <a href="#">Option 3</a>
+                        <a href="#">Option 4</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="tabs-section">
+                <h2>Tabbed Interface</h2>
+                <div class="tabs">
+                    <div class="tab-buttons">
+                        <button class="tab-btn active" data-tab="tab1">Tab 1</button>
+                        <button class="tab-btn" data-tab="tab2">Tab 2</button>
+                        <button class="tab-btn" data-tab="tab3">Tab 3</button>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="tab1">
+                            <h3>First Tab Content</h3>
+                            <p>This is the content for the first tab. JavaScript makes it easy to create tabbed interfaces.</p>
+                        </div>
+                        <div class="tab-pane" id="tab2">
+                            <h3>Second Tab Content</h3>
+                            <p>This is the content for the second tab. Each tab can contain different information.</p>
+                        </div>
+                        <div class="tab-pane" id="tab3">
+                            <h3>Third Tab Content</h3>
+                            <p>This is the content for the third tab. Users can click between tabs to view different content.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="color-picker">
+                <h2>Custom Feature: Color Picker</h2>
+                <p>Click the button to change the color of the box below:</p>
+                <button id="color-btn">Generate Random Color</button>
+                <div class="color-box" id="color-box">Current Color</div>
+            </section>
+
+            <section class="text-effects">
+                <h2>Custom Feature: Text Effects</h2>
+                <p>Apply different effects to the text below:</p>
+                <div class="effect-buttons">
+                    <button id="uppercase">UPPERCASE</button>
+                    <button id="lowercase">lowercase</button>
+                    <button id="capitalize">Capitalize</button>
+                    <button id="reset-text">Reset Text</button>
+                </div>
+                <div class="effect-text" id="effect-text">
+                    This is some sample text that you can transform using the buttons above. JavaScript makes it easy to manipulate text!
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+<footer>
+    <p>&copy; 2025 JavaScript Events & Interactivity. All rights reserved.</p>
+</footer>
+</html>
